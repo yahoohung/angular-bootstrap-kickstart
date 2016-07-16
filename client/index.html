@@ -34,11 +34,13 @@
 <body layout="column" id="main" ng-cloak>
 
 <header id="header" ui-view="header" ng-show="snippet.header"></header>
-<div id="content" ui-view ng-show="snippet.content"></div>
+<div class="container" ui-view ng-show="snippet.content"></div>
 <footer id="footer" ui-view="footer" ng-show="snippet.footer"></footer>
 
 <!-- build:js assets/js/v.js -->
 <script type="text/javascript" src="src/vendor/angular/angular.min.js"></script>
+<script type="text/javascript" src="src/vendor/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="src/vendor/angular-touch/angular-touch.js"></script>
 <script type="text/javascript" src="src/vendor/angular-bootstrap/ui-bootstrap.js"></script>
 <script type="text/javascript" src="src/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
 <!-- endbuild -->
@@ -48,8 +50,12 @@
 <script type="text/javascript" src="src/app/app.js"></script>
 <script type="text/javascript" src="src/app/home/home.js"></script>
 <script type="text/javascript" src="src/app/about/about.js"></script>
+<script type="text/javascript" src="src/app/demo/demo.js"></script>
 <script type="text/javascript" src="src/common/header.js"></script>
 <script type="text/javascript" src="src/common/footer.js"></script>
+<script type="text/javascript" src="src/common/directives/version.js"></script>
+<script type="text/javascript" src="src/common/filters/uppercase.js"></script>
+<script type="text/javascript" src="src/common/services/dataService.js"></script>
 <script type="text/javascript" src="src/common/interceptors/httpInterceptor.js"></script>
 <script type="text/javascript" src="tmp/templates.js"></script>
 <!-- endbuild -->

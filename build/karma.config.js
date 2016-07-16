@@ -8,19 +8,18 @@ module.exports = function(config) {
     files: [
       baseDir + '/src/vendor/angular/angular.js',
       baseDir + '/src/vendor/angular-mocks/angular-mocks.js',
+      baseDir + '/src/vendor/angular-animate/angular-animate.js',
+      baseDir + '/src/vendor/angular-touch/angular-touch.js',
+      baseDir + '/src/vendor/angular-bootstrap/ui-bootstrap.js',
       baseDir + '/src/vendor/angular-ui-router/release/angular-ui-router.js',
-      baseDir + '/src/vendor/angular-animate/angular-animate.min.js',
-      baseDir + '/src/vendor/angular-aria/angular-aria.min.js',
-      baseDir + '/src/vendor/angular-material/angular-material.min.js',
       baseDir + '/src/vendor/angular-resource/angular-resource.min.js',
-      baseDir + '/src/vendor/angular-loading-bar/build/loading-bar.min.js',
+      baseDir + '/src/vendor/angular-aria/angular-aria.min.js',
       baseDir + '/src/app/**/*.js',
       baseDir + '/src/common/**/*.js',
       '../build/tmp/templates.js',
       baseDir + '/test/unit/**/*.spec.js'
     ],
 
-    //used framework
     frameworks: ['jasmine'],
 
     plugins: [

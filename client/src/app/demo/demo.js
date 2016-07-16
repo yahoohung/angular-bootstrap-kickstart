@@ -7,12 +7,12 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.home', {
-        url: '/',
+      .state('root.demo', {
+        url: '/demo',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home'
+            templateUrl: 'src/app/demo/demo.tpl.html',
+            controller: 'DemoCtrl as demo'
           }
         }
       });
@@ -21,14 +21,14 @@
 
 
   /**
-   * @name  home
+   * @name  demo
    * @description Controller
    */
-  function HomeCtrl() {
+  function DemoCtrl() {
 
   }
 
-  angular.module('home', [])
+  angular.module('demo', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('DemoCtrl', DemoCtrl);
 })();

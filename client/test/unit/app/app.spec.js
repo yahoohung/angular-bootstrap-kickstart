@@ -23,8 +23,8 @@
       expect(hasModule('ui.router')).toEqual(true);
     });
 
-    //it('should have common.services.data as a dependency', function() {
-    //  expect(hasModule('common.services.data')).toEqual(true);
-    //});
+    it('should have common.services.data as a dependency', function() {
+      expect(hasModule('ui.bootstrap')).toEqual(true);
+    });
   });
 })();

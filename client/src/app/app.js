@@ -7,6 +7,8 @@
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, CONFIG) {
 
+    console.log(CONFIG);
+
     $urlRouterProvider.otherwise('/');
 
     $logProvider.debugEnabled(true);
@@ -86,6 +88,7 @@
       'ui.router',
       'home',
       'about',
+      'demo',
       'common.header',
       'common.footer',
       'common.interceptors.http',

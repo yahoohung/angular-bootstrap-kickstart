@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular-bootstrap-kickstart by yahoohung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular-bootstrap-kickstart</h1>
+      <h2 class="project-tagline">An optimization-based kickstart for web application development with AngularJS and bootstrap</h2>
+      <a href="https://github.com/yahoohung/angular-bootstrap-kickstart" class="btn">View on GitHub</a>
+      <a href="https://github.com/yahoohung/angular-bootstrap-kickstart/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/yahoohung/angular-bootstrap-kickstart/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular-bootstrap-kickstart" class="anchor" href="#angular-bootstrap-kickstart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/yahoohung/angular-bootstrap-kickstart">angular-bootstrap-kickstart</a>
+</h1>
+
+<p><strong>Speed up your <a href="http://angularjs.org">AngularJS</a> and <a href="http://getbootstrap.com">Bootstrap</a> development a complete and scalable gulpjs based build system that scaffolds the project for you. Just focus on your app, angular-bootstrap-kickstart will take care of the rest.</strong></p>
+
+<hr>
+
+<h3>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h3>
+
+<p><a href="http://net.nevesoft.com/angular-bootstrap-kickstart/">here</a></p>
+
+<h3>
+<a id="what-and-why" class="anchor" href="#what-and-why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What and Why</h3>
+
+<p>angular-bootstrap-kickstart is an optimization-based kickstart for web application development with AngularJS and bootstrap. It makes your development and testing easy, keeps the structure of the project consistent and allows you to create a fully optimized production release with ease.</p>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h3>
+
+<p>Install angular-bootstrap-kickstart downloading the <a href="https://github.com/yahoohung/angular-bootstrap-kickstart/releases">latest release</a> or clone the master branch if you want to run the development version.</p>
+
+<pre><code>$ git clone --depth 1 https://github.com/yahoohung/angular-bootstrap-kickstart.git 
+
+or
+
+$ git clone --depth 1 https://github.com/yahoohung/angular-bootstrap-kickstart.git your-project-name
+</code></pre>
+
+<p>Install <strong>node.js</strong>. Then <strong>gulp</strong> and <strong>bower</strong> then install bower and npm dependencies.</p>
+
+<pre><code>$ npm install gulp bower -g &amp;&amp; npm install &amp;&amp; bower install
+</code></pre>
+
+<p>Run the application in <strong>development mode</strong>.</p>
+
+<pre><code>$ gulp serve
+</code></pre>
+
+<p>You are now ready to go, your applcation is available at <strong><a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></strong>.</p>
+
+<p><strong>Every file you add, edit or delete into the <code>/client</code> folder will be handled by the build system</strong>.</p>
+
+<p>When you are ready to build a <strong>production release</strong> there is a task for that:</p>
+
+<pre><code>$ gulp serve:dist
+</code></pre>
+
+<p>This task will lint your minified code, css, js and images files, run unit tests. After the task has successfully finished, you can find an optimized version of your project inside the  <code>/build/dist</code> folder. Just copy it deploy to your host then enjoy your coffee.</p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>5 simple task: <code>gulp serve</code>,<code>gulp serve:dist</code>, <code>gulp serve:tdd</code>, <code>gulp test:unit</code>, <code>gulp test:e2e</code>
+</li>
+<li>JavaScript file continuous linting with <code>jshint</code>.</li>
+<li>LESS continuous compiling.</li>
+<li>CSS, JS files minify in production mode.</li>
+<li>
+<code>Unit</code> and <code>e2e</code> testing support. (for <code>e2e</code> testing you need to have a java runtine installed, take a look at <a href="http://selenium.googlecode.com/git/docs/api/javascript/index.html">selenium JavaScript api </a> and <a href="https://github.com/angular/protractor">protractor</a> for more information.</li>
+<li>HTML templates converted into strings and attached to a single javascript file (to avoid one http call for each template).</li>
+<li>Livereload provided by <a href="http://www.browsersync.io/">browsersync</a>.</li>
+<li>angular module dependencies automatically injected using <a href="https://github.com/olov/ng-annotate">ng-annotate</a>.</li>
+<li>Static resources minification and optimization for production.</li>
+<li>sourcemaps generated and embedded in JavaScript and css files during the production optimization.</li>
+</ul>
+
+<h3>
+<a id="directory-structure" class="anchor" href="#directory-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directory Structure</h3>
+
+<ul>
+<li>
+<code>build/</code> - Build files and configuration, the most important files to note are <code>build.config.js</code>, <code>protractor.config.js</code> and <code>karma.config.js</code>. These files are the heart of the build system. Take a look.</li>
+<li>
+<code>client/</code> the source code and tests of your application, take a look at the modules in this folder, you should structure your application following those conventions, but you can choose another convention as well.</li>
+<li>
+<code>client/src/app</code> the area that you have to care about</li>
+<li>
+<code>client/src/less/main.less</code> stylesheet file</li>
+<li>
+<code>.bowerrc</code> - the bower configuration file. This tells Bower to install components in the <code>client/src/vendor</code> directory.</li>
+<li>
+<code>.jshintrc</code> - JSHint configuration.</li>
+<li>
+<code>gulpfile</code> - see <a href="#thebuildsystem">The Build System</a> below.</li>
+<li>
+<code>bower.json</code> - Contains the list of bower dependencies.</li>
+<li>
+<code>package.json</code> - node.js dependencies.</li>
+</ul>
+
+<h3>
+<a id="the-build-system" class="anchor" href="#the-build-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a name="thebuildsystem"></a>The Build System</h3>
+
+<p>There are some <code>tasks</code> available in <code>gulpfile.js</code>. You can dig into the file to familiarize yourself with gulpjs.</p>
+
+<p>A description of every available task:</p>
+
+<ul>
+<li>
+<strong>gulp serve</strong> - When this task runs, the build will take care of watching files. Every time you change a file in the <code>client/</code> folder, the build recompiles every file, and your browser will reload automagically showing you the changes.
+You just need to add new JavaScript and css files in the <code>client/index.html</code> file.</li>
+<li>
+<strong>gulp serve:dist</strong> - This task will run jshint and unit tests under the <code>client/test/unit</code> folder (thanks to <code>karma runner</code>), and create a fully-optimized version of your application under the <code>build/dist/</code> folder. The optimization consists of concatenate, minify and compress js and css files, optimize images, and put every template into a js file loaded by the application.
+A code coverage report will be available inside the <code>client/test/unit-results</code>.
+<strong>Note to change browser-sync's server port, change the 'port' and 'uiIPort' settings in build/build.config.js.</strong>
+</li>
+<li>
+<strong>gulp serve:tdd</strong> - Just like <code>gulp serve</code> but in continuous unit testing environment.</li>
+<li>
+<strong>gulp test:unit</strong> - For running unit tests one time then exit.</li>
+<li>
+<strong>gulp test:e2e</strong> - Run end-to-end tests inside the <code>client/test/e2e</code> folder with <code>protractor</code>. If a test fails, you should find a screenshot of the page inside the <code>client/test/screenshots</code> folder.
+<strong>Note that you need to have the application running in order to run e2e tests. You can launch this task from another terminal instance.</strong>
+</li>
+</ul>
+
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>PR and issues reporting are always welcome :)</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>See LICENSE file</p>
+
+<h3>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog</h3>
+
+<p>See CHANGELOG.md file</p>
+
+<h3>
+<a id="thank-you" class="anchor" href="#thank-you" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thank you</h3>
+
+<p>This project folk from <a href="https://github.com/vesparny/angular-kickstart/">https://github.com/vesparny/angular-kickstart/</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/yahoohung/angular-bootstrap-kickstart">Angular-bootstrap-kickstart</a> is maintained by <a href="https://github.com/yahoohung">yahoohung</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

@@ -9,11 +9,19 @@ angular-bootstrap-kickstart is an optimization-based kickstart for web applicati
 
 ### Getting started
 
-Install **node.js**. Then **gulp** and **bower** if you haven't yet.
+Install angular-bootstrap-kickstart downloading the [latest release](https://github.com/yahoohung/angular-bootstrap-kickstart/releases) or clone the master branch if you want to run the development version.
+
+    $ git clone --depth 1 https://github.com/yahoohung/angular-bootstrap-kickstart.git 
+    
+    or
+    
+    $ git clone --depth 1 https://github.com/yahoohung/angular-bootstrap-kickstart.git your-project-name
+
+Install **node.js**. Then **gulp** and **bower** then install bower and npm dependencies.
 
     $ npm install gulp bower -g && npm install && bower install
 
-After that, install angular-bootstrap-kickstart downloading the [latest release](https://github.com/yahoohung/angular-bootstrap-kickstart/releases) (or clone the master branch if you want to run the development version). Unzip the project and cd into it, then install bower and npm dependencies, and run the application in development mode.
+Run the application in **development mode**.
 
     $ gulp serve
 
@@ -22,7 +30,7 @@ You are now ready to go, your applcation is available at **http://127.0.0.1:3000
 **Every file you add, edit or delete into the `/client` folder will be handled by the build system**.
 
 
-When you are ready to build a production release there is a task for that:
+When you are ready to build a **production release** there is a task for that:
 
     $ gulp serve:dist
 

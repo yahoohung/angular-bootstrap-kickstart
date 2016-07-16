@@ -5,36 +5,35 @@
 
 ### What and Why
 
-angular-bootstrap-kickstart is an opinionated kickstart for single page application development with AngularJS. It makes your development and testing easy, keeps the structure of the project consistent and allows you to create a fully optimized production release with ease. After having developed a lot of AngularJS projects I decided to collect here what I've learnt.
+angular-bootstrap-kickstart is an optimization-based kickstart for web application development with AngularJS and bootstrap. It makes your development and testing easy, keeps the structure of the project consistent and allows you to create a fully optimized production release with ease.
 
 ### Getting started
 
 Install **node.js**. Then **gulp** and **bower** if you haven't yet.
 
-    $ npm -g install gulp bower
+    $ npm install gulp bower -g && npm install && bower install
 
 After that, install angular-bootstrap-kickstart downloading the [latest release](https://github.com/yahoohung/angular-bootstrap-kickstart/releases) (or clone the master branch if you want to run the development version). Unzip the project and cd into it, then install bower and npm dependencies, and run the application in development mode.
 
-    $ npm install
-    $ bower install
     $ gulp serve
 
 You are now ready to go, your applcation is available at **http://127.0.0.1:3000**.
 
 **Every file you add, edit or delete into the `/client` folder will be handled by the build system**.
 
+
 When you are ready to build a production release there is a task for that:
 
     $ gulp serve:dist
 
-This task will lint your code, optimize css js and images files, run unit tests. After the task has successfully finished, you can find an optimized version of your project inside the  `/build/dist` folder.
+This task will lint your minified code, css, js and images files, run unit tests. After the task has successfully finished, you can find an optimized version of your project inside the  `/build/dist` folder. Just copy it deploy to your host then enjoy your coffee.
 
 ### Features
 
 * 5 simple task: `gulp serve`,`gulp serve:dist`, `gulp serve:tdd`, `gulp test:unit`, `gulp test:e2e`
 * JavaScript file continuous linting with `jshint`.
 * LESS continuous compiling.
-* CSS, JS files minify.
+* CSS, JS files minify in production mode.
 * `Unit` and `e2e` testing support. (for `e2e` testing you need to have a java runtine installed, take a look at [selenium JavaScript api ](http://selenium.googlecode.com/git/docs/api/javascript/index.html) and [protractor](https://github.com/angular/protractor) for more information.
 * HTML templates converted into strings and attached to a single javascript file (to avoid one http call for each template).
 * Livereload provided by [browsersync](http://www.browsersync.io/).
@@ -46,6 +45,8 @@ This task will lint your code, optimize css js and images files, run unit tests.
 
 * `build/` - Build files and configuration, the most important files to note are `build.config.js`, `protractor.config.js` and `karma.config.js`. These files are the heart of the build system. Take a look.
 * `client/` the source code and tests of your application, take a look at the modules in this folder, you should structure your application following those conventions, but you can choose another convention as well.
+* `client/src/app` the area that you have to care about
+* `client/src/less/main.less` stylesheet file
 * `.bowerrc` - the bower configuration file. This tells Bower to install components in the `client/src/vendor` directory.
 * `.jshintrc` - JSHint configuration.
 * `gulpfile` - see [The Build System](#thebuildsystem) below.
@@ -82,5 +83,4 @@ See CHANGELOG.md file
 
 ### Thank you
 
-https://github.com/vesparny/angular-kickstart/
-
+This project folk from https://github.com/vesparny/angular-kickstart/

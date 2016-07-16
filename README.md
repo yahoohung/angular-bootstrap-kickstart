@@ -95,4 +95,4 @@ See CHANGELOG.md file
 
 ### Thank you
 
-This project folk from https://github.com/vesparny/angular-kickstart/
+This project is a fork of [angular-kickstart](https://github.com/vesparny/angular-kickstart/)

@@ -5,10 +5,7 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, CONFIG, cfpLoadingBarProvider) {
-
-    cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
-    cfpLoadingBarProvider.spinnerTemplate = '<div class="loading-bar-text">loading...</div>';
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, CONFIG) {
 
     $urlRouterProvider.otherwise('/');
 
@@ -87,7 +84,6 @@
       'ui.bootstrap',
       'app.config',
       'ui.router',
-      'angular-loading-bar',
       'home',
       'about',
       'common.header',

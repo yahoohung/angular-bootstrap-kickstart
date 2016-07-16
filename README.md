@@ -1,4 +1,4 @@
-# [angular-bootstrap-kickstart]
+# [angular-bootstrap-kickstart](https://github.com/yahoohung/angular-bootstrap-kickstart)
 
 **Speed up your [AngularJS](http://angularjs.org) and [Bootstrap](http://getbootstrap.com) development a complete and scalable gulpjs based build system that scaffolds the project for you. Just focus on your app, angular-bootstrap-kickstart will take care of the rest.**
 ***
